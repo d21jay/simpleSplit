@@ -9,6 +9,7 @@ class User{
   string name;
   unordered_map<string, int> groups;
   int bal = 0;
+  void setBal(int x);
 public:
   int setUserId(string userId);
   string getUserId();
@@ -17,7 +18,6 @@ public:
   void addGroupBal(string groupId, int bal);
   void setGroups(unordered_map<string, int> groups);
   unordered_map<string, int> getGroups();
-  void setBal(int x);
   int getBal();
 };
 #endif

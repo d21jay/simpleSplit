@@ -18,6 +18,11 @@ void User::addGroupBal(string groupId, int bal){
 }
 void User::setGroups(unordered_map<string, int> groups){
   this->groups = groups;
+  int gbal = 0;
+  for(pair<string, int> g : groups) {
+    gbal += g.second;
+  }
+  this->setBal(this->getBal() + bal);
 }
 unordered_map<string, int> User::getGroups(){
   return this->groups;
